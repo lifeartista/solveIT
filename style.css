@@ -1,0 +1,167 @@
+/* Alap beállítások a testhez */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Betűtípus betöltése */
+@font-face {
+  font-family: 'More Sugar';
+  src: url('more-sugar.ttf') format('truetype');
+}
+
+/* Háttérkép */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('hatter.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+/* Felhők közös alapbeállításai */
+.cloud {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-size: cover;
+  background-position: center;
+  animation: cloudPuff 6s infinite ease-in-out;
+  opacity: 0; /* Kezdetben mind láthatatlan */
+}
+
+/* Minden felhő külön időzítéssel */
+#cloud1 {
+  background-image: url('cloud1.png');
+  animation-delay: 0s; /* Az első felhő azonnal indul */
+}
+
+#cloud2 {
+  background-image: url('cloud2.png');
+  animation-delay: 1.2s; /* A második felhő kicsit később indul */
+}
+
+#cloud3 {
+  background-image: url('cloud3.png');
+  animation-delay: 2.4s; /* A harmadik felhő még később indul */
+}
+
+#cloud4 {
+  background-image: url('cloud4.png');
+  animation-delay: 3.6s; /* A negyedik felhő még később indul */
+}
+
+#cloud5 {
+  background-image: url('cloud5.png');
+  animation-delay: 4.8s; /* Az ötödik felhő az utolsóként indul */
+}
+
+/* Felhők animációja: előtűnés és kipukkanás */
+@keyframes cloudPuff {
+  0% {
+      opacity: 0; /* Kezdetben láthatatlan */
+      transform: scale(0.5); /* Kis méret */
+  }
+  20% {
+      opacity: 1; /* Teljesen láthatóvá válik */
+      transform: scale(1); /* Normál méret */
+  }
+  60% {
+      opacity: 1; /* Kipukkanás előtti felfúvódás */
+      transform: scale(1.2);
+  }
+  100% {
+      opacity: 0; /* Kipukkanás után eltűnik */
+      transform: scale(0.5); /* Vissza kis méretre */
+  }
+}
+
+
+/* Középső statikus kép */
+.center-image {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-image: url('center-image.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 90px rgba(255, 255, 255, 0.7);
+  border: 15px solid #d4af37;
+  box-shadow: 0 0 20px rgba(255, 223, 0, 0.8),
+              inset 0 0 10px rgba(139, 69, 19, 0.5);
+}
+
+/* Jobbra-balra mozgás animáció */
+@keyframes moveLeftRight {
+  0% {
+      transform: translateX(-200px);
+  }
+  50% {
+      transform: translateX(200px);
+  }
+  100% {
+      transform: translateX(-200px);
+  }
+}
+
+/* Pulzáló kép */
+.pulsating-box {
+  position: absolute;
+  bottom: -10px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background-image: url('box.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  z-index: 2;
+}
+/* Alul középen elhelyezkedő szöveg stílusa */
+.footer-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'More Sugar', sans-serif;
+  font-size: 36px;
+  color: black;
+  text-shadow:
+      -1px -1px 0 #fff, /* fehér körvonal */
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px 1px 0 #fff,
+      0 0 5px #00ff00; /* zöld fény */
+}
+
+/* Social Media logók a bal oldalon egymás alatt */
+.social-icons {
+  position: absolute;
+  top: 100px;  /* A távolság a felső résztől */
+  left: 150px; /* A távolság a bal oldaltól */
+  display: flex;
+  flex-direction: column; /* Függőleges elrendezés (egymás alatt) */
+  align-items: flex-start; /* Igazítás balra */
+}
+
+.social-logo {
+  width: 185px;  /* A logók mérete (szélesség) */
+  height: 120px; /* A logók mérete (magasság) */
+  margin-bottom: 10px; /* A logók közötti távolság */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Kattintásra vagy rámutatásra animáció */
+}
+
+.social-logo:hover {
+  transform: scale(1.1); /* Nagyítás, ha rámutatnak */
+}
