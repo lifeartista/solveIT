@@ -165,3 +165,58 @@ body {
 .social-logo:hover {
   transform: scale(1.1); /* Nagyítás, ha rámutatnak */
 }
+
+/* Mobil optimalizálás (maximális szélesség: 480px) */
+@media (max-width: 480px) {
+    .center-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pulsating-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .social-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icons {
+        left: 20px;
+        top: 20px;
+    }
+}
+
+/* Tablet optimalizálás (maximális szélesség: 768px) */
+@media (max-width: 768px) {
+    .center-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .pulsating-box {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-text {
+        font-size: 18px;
+    }
+
+    .social-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-icons {
+        left: 30px;
+        top: 50px;
+    }
+}
