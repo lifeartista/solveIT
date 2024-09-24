@@ -145,25 +145,28 @@ body {
       0 0 5px #00ff00; /* zöld fény */
 }
 
-/* Social Media logók a bal oldalon egymás alatt */
 .social-icons {
   position: absolute;
-  top: 100px;  /* A távolság a felső résztől */
-  left: 150px; /* A távolság a bal oldaltól */
+  top: 20px; /* Távolság a felső résztől */
+  left: 50%;
+  transform: translateX(-50%); /* Középre igazítás */
   display: flex;
-  flex-direction: column; /* Függőleges elrendezés (egymás alatt) */
-  align-items: flex-start; /* Igazítás balra */
+  flex-direction: row; /* Vízszintes elrendezés (egymás mellett) */
+  justify-content: center; /* Középre igazítás vízszintesen */
 }
 
 .social-logo {
   width: 185px;  /* A logók mérete (szélesség) */
   height: 120px; /* A logók mérete (magasság) */
-  margin-bottom: 10px; /* A logók közötti távolság */
+  margin-right: 10px; /* A logók közötti távolság vízszintesen */
   cursor: pointer;
   transition: transform 0.3s ease; /* Kattintásra vagy rámutatásra animáció */
+}
+
+.social-logo:last-child {
+  margin-right: 0; /* Az utolsó logó ne kapjon extra távolságot */
 }
 
 .social-logo:hover {
   transform: scale(1.1); /* Nagyítás, ha rámutatnak */
 }
-
