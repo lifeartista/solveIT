@@ -99,7 +99,7 @@ body {
   border: 15px solid #d4af37;
   box-shadow: 0 0 20px rgba(255, 223, 0, 0.8),
               inset 0 0 10px rgba(139, 69, 19, 0.5);
-  top: 50px; /* Ez a sor lejjebb tolja a képet */
+  top: 45px; /* Ez a sor lejjebb tolja a képet */
 }
 
 /* Jobbra-balra mozgás animáció */
