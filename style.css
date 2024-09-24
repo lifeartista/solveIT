@@ -175,16 +175,15 @@ body {
 /* Mobil eszközökre (max szélesség: 600px) */
 @media (max-width: 600px) {
   .social-icons {
-    flex-direction: column; /* Egymás alatt jelenjenek meg a logók */
     left: 10px; /* Balra igazítás, hogy a képernyőn belül maradjon */
     transform: none; /* Ne legyen középre igazítás */
     top: 10px; /* Kisebb felső távolság mobilon */
+    justify-content: flex-start; /* Kezdőponttól igazítás mobilon */
   }
 
   .social-logo {
     width: 100px;  /* Kisebb logók mobilon */
     height: 65px;  /* Magasság is kisebb mobilon */
-    margin-bottom: 10px; /* Függőleges távolság egymás alatt lévő logók között */
-    margin-right: 0; /* Jobb margó eltávolítása, mivel függőlegesek lesznek */
+    margin-right: 5px; /* Fél akkora távolság a logók között vízszintesen */
   }
 }
