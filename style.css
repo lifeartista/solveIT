@@ -171,6 +171,26 @@ body {
 .social-logo:hover {
   transform: scale(1.1); /* Nagyítás, ha rámutatnak */
 }
+/* Bal oldalon középen elhelyezkedő kép, csak nem mobil eszközökön */
+.side-image {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Középre igazítás függőlegesen */
+  width: 300px; /* A kép szélessége */
+  height: auto; /* Automatikus magasság */
+  background-image: url('text.png'); /* A kép URL-je */
+  background-size: cover;
+  background-position: center;
+  display: block; /* Alapértelmezetten látható */
+}
+
+/* Mobil eszközökre (max szélesség: 600px) - a képet elrejtjük */
+@media (max-width: 600px) {
+  .side-image {
+    display: none; /* A kép rejtése mobil eszközön */
+  }
+}
 
 /* Mobil eszközökre (max szélesség: 600px) */
 @media (max-width: 600px) {
