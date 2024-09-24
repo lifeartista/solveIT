@@ -145,6 +145,7 @@ body {
       0 0 5px #00ff00; /* zöld fény */
 }
 
+/* Alap stílusok - desktop és nagyobb kijelzőkre */
 .social-icons {
   position: absolute;
   top: 20px; /* Távolság a felső résztől */
@@ -169,4 +170,21 @@ body {
 
 .social-logo:hover {
   transform: scale(1.1); /* Nagyítás, ha rámutatnak */
+}
+
+/* Mobil eszközökre (max szélesség: 600px) */
+@media (max-width: 600px) {
+  .social-icons {
+    flex-direction: column; /* Egymás alatt jelenjenek meg a logók */
+    left: 10px; /* Balra igazítás, hogy a képernyőn belül maradjon */
+    transform: none; /* Ne legyen középre igazítás */
+    top: 10px; /* Kisebb felső távolság mobilon */
+  }
+
+  .social-logo {
+    width: 100px;  /* Kisebb logók mobilon */
+    height: 65px;  /* Magasság is kisebb mobilon */
+    margin-bottom: 10px; /* Függőleges távolság egymás alatt lévő logók között */
+    margin-right: 0; /* Jobb margó eltávolítása, mivel függőlegesek lesznek */
+  }
 }
