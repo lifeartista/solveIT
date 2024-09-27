@@ -211,3 +211,31 @@ body {
     margin-right: 0; /* Az utolsó logónak ne legyen margója mobilon sem */
   }
 }
+/* Az egész weboldal háttér és színek beállítása */
+    body {
+    background-color: black; /* Háttér teljesen fekete */
+    filter: grayscale(100%); /* Színek fekete-fehérré alakítása */
+    color: white; /* Szöveg alapértelmezett színe fehér */
+  }
+
+  /* Fehér kontúrvonal minden szöveghez */
+    h1, h2, h3, p, a, span, li {
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    color: white; /* Szövegek fehér színűek */
+  }
+
+   /* Fehér kontúrvonal dobozokhoz (pl. div-ek, szekciók, stb.) */
+    div, section, header, footer, img, video {
+    filter: grayscale(100%); /* Minden színes elem fekete-fehér lesz */
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    border: 2px solid white; /* Fehér kontúr a blokkok körül */
+  }
+ 
+  /* Fehér kontúrvonal az animációkhoz, gombokhoz, interaktív elemekhez */
+    button, input, select {
+    filter: grayscale(100%);
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    border: 2px solid white;
+    color: white;
+  }
+}
