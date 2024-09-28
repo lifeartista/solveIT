@@ -89,8 +89,8 @@ body {
 
 .center-image {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   background-image: url('center-image.jpg');
   background-size: cover;
   background-position: center;
@@ -119,7 +119,7 @@ body {
 .pulsating-box {
   position: absolute;
   bottom: -10px;
-  left: 50px;
+  left: 180px;
   width: 100px;
   height: 100px;
   background-image: url('box.jpg');
@@ -135,7 +135,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-family: 'More Sugar', sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   color: black;
   text-shadow:
       -1px -1px 0 #fff, /* fehér körvonal */
@@ -143,6 +143,35 @@ body {
       -1px 1px 0 #fff,
       1px 1px 0 #fff,
       0 0 5px #00ff00; /* zöld fény */
+}
+/* Bal oldalon középen elhelyezkedő kép */
+.side-image-left {
+  position: absolute;
+  left: 0; /* A kép a bal oldalra kerül */
+  top: 50%; /* Függőlegesen középre helyezzük */
+  transform: translateY(-50%); /* Középre igazítás függőlegesen */
+  width: 480px; /* A kép szélessége */
+  height: auto; /* Automatikus magasság a kép arányainak megtartásához */
+}
+
+.side-image-left img {
+  width: 100%; /* A kép kitölti a container szélességét */
+  height: auto; /* A kép arányait megtartjuk */
+}
+
+/* Jobb oldalon középen elhelyezkedő kép */
+.side-image-right {
+  position: absolute;
+  right: 0; /* A kép a jobb oldalra kerül */
+  top: 50%; /* Függőlegesen középre helyezzük */
+  transform: translateY(-50%); /* Középre igazítás függőlegesen */
+  width: 480px; /* A kép szélessége */
+  height: auto; /* Automatikus magasság a kép arányainak megtartásához */
+}
+
+.side-image-right img {
+  width: 100%; /* A kép kitölti a container szélességét */
+  height: auto; /* A kép arányait megtartjuk */
 }
 
 /* Alap stílusok - desktop és nagyobb kijelzőkre */
@@ -171,26 +200,8 @@ body {
 .social-logo:hover {
   transform: scale(1.1); /* Nagyítás, ha rámutatnak */
 }
-/* Bal oldalon középen elhelyezkedő kép, csak nem mobil eszközökön */
-.side-image {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); /* Középre igazítás függőlegesen */
-  width: 300px; /* A kép szélessége */
-  height: auto; /* Automatikus magasság */
-  background-image: url('text.png'); /* A kép URL-je */
-  background-size: cover;
-  background-position: center;
-  display: block; /* Alapértelmezetten látható */
-}
 
-/* Mobil eszközökre (max szélesség: 600px) - a képet elrejtjük */
-@media (max-width: 600px) {
-  .side-image {
-    display: none; /* A kép rejtése mobil eszközön */
-  }
-}
+
 
 /* Mobil eszközökre (max szélesség: 600px) */
 @media (max-width: 600px) {
@@ -203,7 +214,7 @@ body {
 
   .social-logo {
     width: 100px;  /* Kisebb logók mobilon */
-    height: 65px;  /* Magasság is kisebb mobilon */
+    height: 100px;  /* Magasság is kisebb mobilon */
     margin-right: 5px; /* Fél akkora távolság a logók között vízszintesen */
   }
 
