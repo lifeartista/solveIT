@@ -151,7 +151,7 @@ body {
   left: 0; /* A kép a bal oldalra kerül */
   top: 50%; /* Függőlegesen középre helyezzük */
   transform: translateY(-50%); /* Középre igazítás függőlegesen */
-  width: 480px; /* A kép szélessége */
+  width: 400px; /* A kép szélessége */
   height: auto; /* Automatikus magasság a kép arányainak megtartásához */
   z-index: 20
 }
@@ -167,7 +167,7 @@ body {
   right: 0; /* A kép a jobb oldalra kerül */
   top: 50%; /* Függőlegesen középre helyezzük */
   transform: translateY(-50%); /* Középre igazítás függőlegesen */
-  width: 480px; /* A kép szélessége */
+  width: 400px; /* A kép szélessége */
   height: auto; /* Automatikus magasság a kép arányainak megtartásához */
   z-index: 20
 }
