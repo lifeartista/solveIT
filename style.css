@@ -243,7 +243,7 @@ body {
     /* Center-image feljebb helyezése mobilon */
     .center-image {
         position: relative;
-        top: -50px; /* A kép feljebb mozgatása mobilon */
+        top: -10px; /* A kép feljebb mozgatása mobilon */
         width: 300px; /* Kisebb kép mobilon */
         height: auto; /* Automatikus magasság a kép arányainak megtartásához */
     }
