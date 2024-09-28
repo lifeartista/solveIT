@@ -224,4 +224,21 @@ body {
   .social-logo:last-child {
     margin-right: 0; /* Az utolsó logónak ne legyen margója mobilon sem */
   }
+    /* Bal és jobb oldali képek elrejtése mobilon */
+    .side-image-left,
+    .side-image-right {
+        display: none; /* A képek elrejtése mobil eszközökön */
+    }
+
+    /* Szövegdoboz (footer-text) igazítása mobilhoz */
+    .footer-text {
+        position: absolute;
+        bottom: 5px; /* Alulra igazítás */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px; /* Kisebb betűméret mobilon */
+        color: black;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 5px #00ff00; /* Zöld fény */
+    }
+}
 }
