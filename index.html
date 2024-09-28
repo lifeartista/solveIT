@@ -53,19 +53,5 @@
     <div class="side-image-right">
         <img src="text1.2.png" alt="Text Image">
     </div>
-   
-    /* Mobil álló (portrait) nézethez - maximum 600px szélességgel */
-      @media (max-width: 600px) and (orientation: portrait) {
-      body {
-    transform: rotate(-90deg); /* 90 fokkal elforgatja az oldalt */
-    transform-origin: left top; /* A forgatás a bal felső sarokból indul */
-    width: 100vh; /* A szélességet a magassághoz igazítja */
-    height: 100vw; /* A magasságot a szélességhez igazítja */
-    overflow-x: hidden; /* Képernyőn kívüli tartalmak elrejtése */
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
 </body>
 </html>
