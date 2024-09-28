@@ -229,12 +229,10 @@ body {
     .side-image-right {
         display: none; /* A képek elrejtése mobil eszközökön */
   }
-  /* Tablet mérethez való skálázás (600px és 1024px között) */
-@media (min-width: 600px) and (max-width: 1024px) {
-  body {
-    transform: scale(0.7);  /* Skálázás 70%-ra */
-    transform-origin: top left; /* A skálázás a bal felső sarokból indul */
-    width: 100vw; /* A szélesség maradjon 100% */
-    height: auto; /* Automatikus magasság */
-  }
+  /* Tabletre vonatkozó stílusok */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .center-image {
+        width: 180px;
+        height: 180px;
+    }
 }
