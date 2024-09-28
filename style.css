@@ -240,5 +240,22 @@ body {
         color: black;
         text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 5px #00ff00; /* Zöld fény */
     }
-}
+    /* Center-image feljebb helyezése mobilon */
+    .center-image {
+        position: relative;
+        top: -50px; /* A kép feljebb mozgatása mobilon */
+        width: 300px; /* Kisebb kép mobilon */
+        height: auto; /* Automatikus magasság a kép arányainak megtartásához */
+    }
+
+    /* Szövegdoboz (footer-text) igazítása mobilhoz és követése */
+    .footer-text {
+        position: relative;
+        top: -30px; /* Kövesse a center-image elmozdulását */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px; /* Kisebb betűméret mobilon */
+        color: black;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 5px #00ff00; /* Zöld fény */
+    }
 }
