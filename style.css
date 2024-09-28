@@ -228,5 +228,69 @@ body {
     .side-image-left,
     .side-image-right {
         display: none; /* A képek elrejtése mobil eszközökön */
+  }
+  /* Tablet eszközökre (min szélesség: 600px, max szélesség: 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    /* Háttérkép méretezése tableten */
+    .background {
+        background-size: cover;
     }
+
+    /* Center-image igazítása tablethez */
+    .center-image {
+        width: 350px; /* A center-image mérete kisebb, mint desktopon */
+        height: 350px; /* Megfelelő arány a tablethez */
+        top: 30px; /* Kicsit lejjebb kerül, mint desktopon */
+        z-index: 10;
+    }
+
+    /* Felhők méretének és animációjának igazítása tablethez */
+    .cloud {
+        width: 1280px; /* Felhők kisebbek tableten */
+        height: 720px;
+        animation: cloudPuff 8s infinite ease-in-out; /* Lassabb mozgás tableten */
+    }
+
+    /* Bal oldali kép igazítása tableten */
+    .side-image-left {
+        width: 250px; /* A bal oldali kép kisebb tableten */
+        top: 45%; /* Függőlegesen kicsit lejjebb mozgatjuk */
+        transform: translateY(-45%); /* Arányosan középen marad */
+    }
+
+    /* Jobb oldali kép igazítása tableten */
+    .side-image-right {
+        width: 250px; /* A jobb oldali kép kisebb tableten */
+        top: 45%; /* Függőlegesen kicsit lejjebb mozgatjuk */
+        transform: translateY(-45%); /* Arányosan középen marad */
+    }
+
+    /* Pulzáló kép igazítása tableten */
+    .pulsating-box {
+        width: 80px; /* Kisebb pulzáló kép tableten */
+        height: 80px;
+        left: 150px; /* Igazítás a képernyőn */
+        bottom: 0px; /* Helyes pozíció lent */
+    }
+
+    /* Szövegdoboz (footer-text) igazítása tablethez */
+    .footer-text {
+        font-size: 24px; /* Kicsit kisebb betűméret tableten */
+        bottom: 5px; /* Kisebb távolság az aljától */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Jobbra-balra mozgás sebességének lassítása tableten */
+    @keyframes moveLeftRight {
+        0% {
+            transform: translateX(-150px); /* Kevesebb mozgás tableten */
+        }
+        50% {
+            transform: translateX(150px);
+        }
+        100% {
+            transform: translateX(-150px);
+        }
 }
