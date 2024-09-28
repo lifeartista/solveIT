@@ -229,10 +229,4 @@ body {
     .side-image-right {
         display: none; /* A képek elrejtése mobil eszközökön */
   }
-  /* Tabletre vonatkozó stílusok */
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .center-image {
-        width: 180px;
-        height: 180px;
-    }
 }
